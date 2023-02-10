@@ -61,7 +61,7 @@
 								label="Группа клиентов"
 								persistent-hint
 								return-object
-								single-
+								single-line
 								class="mb-10"
 							></v-select>
 						</v-row>
@@ -101,7 +101,7 @@
 				</v-row>
 				<v-row justify="center">
 					<div class="d-flex flex-column">
-						<v-btn color="success" class="mt-4" block type="submit">
+						<v-btn color="success" class="mt-4" block type="submit" :disabled="!valid">
 							{{ regBtnText }}
 						</v-btn>
 
@@ -124,6 +124,7 @@
 import axios from 'axios';
 export default {
 	data: () => ({
+		valid: false,
 		formData: {
 			firstname: '',
 			lastname: '',
