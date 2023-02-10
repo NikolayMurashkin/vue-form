@@ -174,7 +174,7 @@ export default {
 					'https://3e9b7e01-7986-4061-bb1a-4a607d620ef3.mock.pstmn.io',
 					this.formData
 				)
-				.then((response) => {
+				.then(() => {
 					this.regBtnText = 'Данные успешно отправлены!';
 				})
 				.catch((err) => console.log(err));
