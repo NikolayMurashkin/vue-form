@@ -167,7 +167,7 @@ export default {
 		reset() {
 			this.$refs.form.reset();
 		},
-		onSubmit(event) {
+		onSubmit() {
 			this.regBtnText = 'Отправка данных...';
 			axios
 				.post(
@@ -176,10 +176,8 @@ export default {
 				)
 				.then((response) => {
 					this.regBtnText = 'Данные успешно отправлены!';
-					console.log(response)
 				})
 				.catch((err) => console.log(err));
-			console.log(event);
 		},
 	},
 };
